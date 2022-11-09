@@ -1,0 +1,29 @@
+.product-list
+    row-gap: 1.5em
+.product-item 
+    column-gap: 1em
+    @include flex-column
+    @include tablet
+        column-gap: 3em
+    @include mob-lg
+       flex-flow: row nowrap
+    &__image
+        flex: 1 1 40%
+    &__content
+        height: inherit
+        justify-content: space-between
+        row-gap: 1em
+        flex: 1 1 60%
+        @include flex-column
+        .box
+            column-gap: 1em
+            @include flx-jc-cen
+            button
+                flex-grow: 1
+
+    &__title
+        font-size: calc(16px + 2vmin);
+        padding: 15px 0
+    &__price
+        font-weight: 700
+    

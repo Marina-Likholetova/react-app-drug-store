@@ -1,0 +1,25 @@
+.header 
+    // background-color: $color--bg;
+    padding: 20px 0
+    @include flx-align-items-cen
+    .container, nav
+        @include flex-space-between-align-cen 
+    .logo
+        max-width: 14em
+    &__list, nav
+        column-gap: 20px
+        @include flx-align-items-cen
+    &__item 
+        a
+            color: $color--text
+            font-weight: 700
+            font-size: calc(3px + 2vmin)
+            transition: $transition--main
+            padding-bottom: 5px
+            border-bottom: 2px solid transparent
+            &:hover
+                color: $color--primary
+             
+    .active 
+        color: $color--primary
+        border-color: $color--primary
