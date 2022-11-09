@@ -5,7 +5,7 @@ export const categories = [
     },
     {
         name: "Supplements",
-        img: "http://thesportdigest.com/wp-content/uploads/2020/03/bigstock-Spoon-With-Dietary-Supplements-70069831-768x512.jpg"
+        img: "https://recreation.ucsd.edu/wp-content/uploads/2020/09/supplements-1200x800-1.jpg"
     },
     {
         name: "Sport",
