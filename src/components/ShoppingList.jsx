@@ -5,7 +5,6 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 import { increment, decrement, removeShoppingCart } from "../features/account/accountSlice";
-// import { products } from "../db/productsDb";
 import Counter from "./common/Counter";
 
 
@@ -13,6 +12,7 @@ export default function ShoppingList() {
     const shoppingCarts = useSelector((state) => state.account.value.shoppingCarts);
     const products = useSelector(state => state.products.value);
     const dispatch = useDispatch();
+    console.log(products);
 
     const isshoppingCarts = (id) => {
         const result = shoppingCarts.find((item) => Number(item.id) === id);
@@ -22,7 +22,7 @@ export default function ShoppingList() {
     const shoppingList = products
         .map((item) => {
             const shoppingCart = isshoppingCarts(item.id);
-            if (shoppingCart) return { ...item, ...shoppingCart };
+            return (shoppingCart) ? { ...item, ...shoppingCart } : ""
         })
         .filter((item) => item);
 
