@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import { Button, IconButton } from "@mui/material";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
@@ -9,7 +9,7 @@ export default function Carousel({ carouselData }) {
     const [current, setCurrent] = useState(0);
     const [autoPlay, setAutoPlay] = useState(true);
     const navigate = useNavigate();
-    let timeOut = null;
+    const timeOut = useRef(null);
 
     const slideRight = () => {
         setCurrent(current === carouselData.length - 1 ? 0 : current + 1);
@@ -20,12 +20,13 @@ export default function Carousel({ carouselData }) {
     };
 
 
+
     useEffect(() => {
-        timeOut =
+        timeOut.current =
             autoPlay &&
             setTimeout(() => {
                 slideRight();
-            }, 5000);
+            }, 4000);
     });
 
     return (
