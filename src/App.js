@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { ScrollRestoration } from "react-router-dom";
 import Header from './components/Header';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <p>Coperight © 2022</p>
         </div>
       </footer>
+      <ScrollRestoration />
     </>
   );
 }

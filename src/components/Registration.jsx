@@ -150,7 +150,7 @@ export default function Registration() {
                             {item.error && (
                                 <FormHelperText id="component-error-text">
                                     {item.prop === "passwordVerify"
-                                        ? `Passwords does not match`
+                                        ? `Passwords do not match`
                                         : `Invalid ${item.label.toLowerCase()}`}
                                 </FormHelperText>
                             )}
