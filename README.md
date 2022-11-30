@@ -10,7 +10,7 @@ This project was bootstrapped with Create React App.
 * Custom Carousel component
 * Saving data using local storage
 * Responsive design
-* Styled Components
+* Theme switch
 
 
 ### Tech Stack 
