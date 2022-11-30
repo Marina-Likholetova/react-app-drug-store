@@ -15,10 +15,10 @@ html, body
 $color--bg: #eeecec
 $color--primary: #4e72d0
 $color--text: #223645
-$color--text--light: rgb(130,146,155)
+// $color--text--light: rgb(130,146,155)
 $color--title: rgb(63,77,85)
 $color--hover--link: #7e4ed0
-
+$color--text--light: rgb(135, 150, 165)
 
 $error--bg: #f2dede
 $error--border: #ebccd1
@@ -45,6 +45,11 @@ a
 h1
     margin-bottom: 30px
 
+main
+    padding-top: 3em
+    @include tablet
+        padding-top: 5em
+        
 .container 
     max-width: 1030px
     width: 100%
@@ -84,6 +89,26 @@ h1
     color: $color--primary 
     display: inline-block
     margin-bottom: 20px
+    
     &:hover
         color: $color--hover--link
-   
+
+.text-color 
+    color: $color--text 
+
+.dark-theme 
+    background-color: #000e21 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))
+    color: $color--text--light
+
+.dark-theme-link
+    color: $color--text--light
+    transition: all .3s ease
+    &:hover
+        color: $color--primary
+
+.light-theme-link 
+    color:  #223645
+    transition: all .3s ease
+    &:hover
+        color: $color--primary

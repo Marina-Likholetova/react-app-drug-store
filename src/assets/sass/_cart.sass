@@ -23,16 +23,21 @@
             width: 100%
             height: 100%
             position: absolute
-            background-color: #ffffff7a
-            font-weight: 700
-            color: $color--text
             transition: $transition--main
-            text-shadow: 0 3px 10px #ffffff
+            font-weight: 700
             @include flex-cen-cen
-            &:hover, .active
+            
+            &.light, &.dark:hover
+                color: $color--text
+                text-shadow: 0 3px 10px #ffffff
+                background-color: #ffffff7a
+                
+            &.dark, &.light:hover
                 color: #FFFFFF
                 text-shadow: 0 3px 10px #010101
                 background-color: #46464696
+            
+
 
 
     &__product
@@ -61,8 +66,6 @@
                 display: block
                 object-fit: contain
         &-title
-            color: $color--text
-            transition: inherit
             &:hover
                 color: $color--primary
                 
@@ -80,3 +83,4 @@
         
     100%
         transform: scale(1)
+

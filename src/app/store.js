@@ -7,6 +7,7 @@ import logger from "redux-logger";
 import accountSlice from '../features/account/accountSlice';
 import productsSlice from "../features/products/productsSlice";
 import usersSlice from "../features/users/usersSlice";
+import themeSlice from "../features/theme/themeSlice";
 
 
     const persistConfig = {
@@ -17,7 +18,8 @@ import usersSlice from "../features/users/usersSlice";
     const rootReducer = combineReducers({
         account: accountSlice,
         products: productsSlice,
-        users: usersSlice
+        users: usersSlice,
+        theme: themeSlice
     });
 
     const persistedReducer = persistReducer(persistConfig, rootReducer);

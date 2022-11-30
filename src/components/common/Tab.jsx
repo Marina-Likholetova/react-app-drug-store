@@ -50,12 +50,12 @@ export default function BasicTabs({ tabContent }) {
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     {Object.keys(tabContent).map((item, i) => (
-                        <Tab label={item} {...a11yProps(i)} />
+                        <Tab label={item} {...a11yProps(i)} key={item} />
                     ))}
                 </Tabs>
             </Box>
             {Object.values(tabContent).map((item, i) => (
-                <TabPanel value={value} index={i}>
+                <TabPanel value={value} index={i} key={i}> 
                     {item}
                 </TabPanel>
             ))}

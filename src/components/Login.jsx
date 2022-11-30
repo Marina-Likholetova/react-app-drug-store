@@ -73,7 +73,7 @@ export default function Login() {
                 <h2 className="title">Sign In</h2>
                 <p className="desription">For current customers</p>
 
-                <Stack onSubmit={handleSubmit} component="form" spacing={2} Validate autoComplete="off">
+                <Stack onSubmit={handleSubmit} component="form" spacing={2} autoComplete="off">
                     <FormControl error={emailError} variant="outlined">
                         <InputLabel htmlFor={emailError ? "component-error" : "outlined-adornment-email"}>
                             Email

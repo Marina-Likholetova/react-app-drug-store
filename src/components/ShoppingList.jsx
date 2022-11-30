@@ -34,7 +34,7 @@ export default function ShoppingList() {
         <div className="content-wrapper shopping-container pd-1-3">
             <ul className="shopping-list">
                 {shoppingList.map((item, i) => (
-                    <li className="shopping-item">
+                    <li className="shopping-item" key={item.title}>
                         <span>{i + 1}</span>
                         <div className="image-wrapper item__image">
                             <img src={item.img} alt={item.title} />

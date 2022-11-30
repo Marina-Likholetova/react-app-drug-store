@@ -108,22 +108,22 @@ export default function Registration() {
             <div className="userForm" onSubmit={handleSubmit}>
                 <h2 className="title">Quick Registration</h2>
                 <p className="desription">For new customers</p>
-                <Stack onSubmit={handleSubmit} component="form" spacing={2} Validate autoComplete="off">
+                <Stack onSubmit={handleSubmit} component="form" spacing={2} autoComplete="off">
                     {isUserExist && <Alert severity="error">User exists already!</Alert>}
                     {isSuccess && <Alert severity="success">Your registration is successful!</Alert>}
-                    {Object.values(values).map((item) => (
-                        <FormControl fullWidth variant="outlined" error={item.error}>
+                    {Object.values(values).map((item, i) => (
+                        <FormControl fullWidth variant="outlined" error={item.error} key={i}>
                             <InputLabel
                                 htmlFor={
                                     item.error
                                         ? "component-error"
-                                        : `outlined-adornment-${item.label.toLocaleLowerCase()}`
+                                        : `outlined-adornment-${item.prop.toLocaleLowerCase()}`
                                 }
                             >
                                 {item.label}
                             </InputLabel>
                             <OutlinedInput
-                                id={`outlined-adornment-${item.label.toLocaleLowerCase()}`}
+                                id={`outlined-adornment-${item.prop.toLocaleLowerCase()}`}
                                 type={item.type === "password" && item.showPassword ? "text" : item.type}
                                 value={item.value}
                                 onChange={handleChange(`${item.prop}`, item)}

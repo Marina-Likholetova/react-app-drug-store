@@ -29,7 +29,9 @@ export default function ProductItem() {
 
     return (
         <div className="content-wrapper">
-            <Link className="primary-link" to="/">Back to Homepage</Link>
+            <Link className="primary-link" to="/">
+                Back to Homepage
+            </Link>
             <div className="product-item">
                 <div className="product-item__image image-wrapper">
                     <img src={product.img} alt={product.title} />
@@ -50,7 +52,7 @@ export default function ProductItem() {
                                     dispatch(incrementByAmount({ id, count }));
                                     setCount(0);
                                 } else {
-                                    navigate("/login")
+                                    navigate("/login");
                                 }
                             }}
                         >
